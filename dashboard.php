@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'helpers.php';
+require __DIR__ . '/includes/helpers.php';
 requerir_sesion_pagina();
 
 $nombre = $_SESSION['nombre'] ?? 'Jugador';

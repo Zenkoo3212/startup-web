@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     exit;
 }
 
-require_once __DIR__ . '/helpers.php';
+require_once __DIR__ . '/includes/helpers.php';
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Allow: GET, POST');
     respuesta_json(['success' => false, 'message' => 'Método no permitido.'], 405);
@@ -106,7 +106,7 @@ try {
     respuesta_json(['success' => false, 'message' => $e->getMessage()], 422);
     exit;
 }
-require __DIR__ . '/config.php';
+require __DIR__ . '/configuracion/config.php';
 try {
     if (!permitir_solicitud_recuperacion($pdo, $correo, $_SERVER['REMOTE_ADDR'] ?? 'unknown')) {
         header('Retry-After: 3600');

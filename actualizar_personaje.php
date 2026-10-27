@@ -1,8 +1,8 @@
 <?php
 session_start();
 header('Content-Type: application/json');
-require 'config.php';
-require 'helpers.php';
+require __DIR__ . '/configuracion/config.php';
+require __DIR__ . '/includes/helpers.php';
 
 requerir_sesion_json();
 

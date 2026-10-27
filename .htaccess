@@ -3,7 +3,7 @@ DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteRule ^(?:PHPMailer)(?:/|$) - [F,L]
+    RewriteRule ^(?:includes|configuracion|base_de_datos|documentacion|\.git)(?:/|$) - [F,L]
 </IfModule>
 
 <FilesMatch "(^\.|^Dockerfile$|\.(sql|md|json|lock|ya?ml|log|ini|bak|zip)$|^(config(?:\..*)?|helpers|correo|test_db)\.php$)">

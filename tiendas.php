@@ -1,7 +1,7 @@
 <?php
 session_start();
-require 'config.php';
-require 'helpers.php';
+require __DIR__ . '/configuracion/config.php';
+require __DIR__ . '/includes/helpers.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     requerir_rol_pagina(['Admin']);

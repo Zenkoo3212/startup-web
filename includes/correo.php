@@ -3,7 +3,9 @@
 function app_config(string $key, $default = null) {
     static $local = null;
     if ($local === null) {
-        $file = __DIR__ . '/config.local.php';
+        $file = dirname(__DIR__) . '/configuracion/config.local.php';
+        // Compatibilidad con instalaciones que ya usaban la configuración en la raíz.
+        if (!is_file($file)) $file = dirname(__DIR__) . '/config.local.php';
         $local = is_file($file) ? require $file : [];
         if (!is_array($local)) throw new RuntimeException('config.local.php debe devolver un array.');
     }

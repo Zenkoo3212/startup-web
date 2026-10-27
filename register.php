@@ -149,8 +149,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 }
 
 header('Content-Type: application/json');
-require 'config.php';
-require 'helpers.php';
+require __DIR__ . '/configuracion/config.php';
+require __DIR__ . '/includes/helpers.php';
 
 $data = json_decode(file_get_contents('php://input'), true);
 

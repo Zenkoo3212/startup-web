@@ -1,5 +1,6 @@
 .git
 config.local.php
+configuracion/config.local.php
 .env
 .env.*
 *.zip

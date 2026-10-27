@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     exit;
 }
 
-require_once __DIR__ . '/helpers.php';
+require_once __DIR__ . '/includes/helpers.php';
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Allow: GET, POST');
     respuesta_json(['success' => false, 'message' => 'Método no permitido.'], 405);
@@ -165,7 +165,7 @@ try {
     respuesta_json(['success' => false, 'message' => $e->getMessage()], 422);
     exit;
 }
-require __DIR__ . '/config.php';
+require __DIR__ . '/configuracion/config.php';
 try {
     if (!cambiar_password_recuperada($pdo, $token, $password)) {
         respuesta_json(['success' => false, 'message' => 'Este enlace venció, ya se utilizó o no es válido. Solicita uno nuevo.'], 410);

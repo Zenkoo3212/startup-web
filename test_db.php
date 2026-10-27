@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+require __DIR__ . '/configuracion/config.php';
 header('Content-Type: application/json; charset=utf-8');
 try {
     $stmt = $pdo->query("SELECT 1 as ok");

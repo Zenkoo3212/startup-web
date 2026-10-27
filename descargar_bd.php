@@ -1,9 +1,9 @@
 <?php
 session_start();
-require 'helpers.php';
+require __DIR__ . '/includes/helpers.php';
 requerir_rol_pagina(['Admin']);
 
-$archivo = __DIR__ . '/database.sql';
+$archivo = __DIR__ . '/base_de_datos/database.sql';
 
 if (!file_exists($archivo)) {
     http_response_code(404);
