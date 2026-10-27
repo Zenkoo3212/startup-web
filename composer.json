@@ -1,0 +1,14 @@
+{
+  "name": "startup/plataforma",
+  "description": "Plataforma web del proyecto Startup con recuperación por correo SMTP",
+  "type": "project",
+  "require": {
+    "php": "^8.1",
+    "ext-pdo": "*",
+    "ext-pdo_mysql": "*",
+    "ext-mbstring": "*",
+    "ext-openssl": "*",
+    "phpmailer/phpmailer": "~7.1.1"
+  },
+  "config": {"sort-packages": true}
+}
