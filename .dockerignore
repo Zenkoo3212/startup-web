@@ -1,10 +1,7 @@
 .git
-.github
-vendor
 config.local.php
 .env
 .env.*
-tests
 *.zip
 *.log
 backups

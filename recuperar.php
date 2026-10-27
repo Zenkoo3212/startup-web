@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     exit;
 }
 
-require_once __DIR__ . '/app/bootstrap.php';
+require_once __DIR__ . '/helpers.php';
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Allow: GET, POST');
     respuesta_json(['success' => false, 'message' => 'Método no permitido.'], 405);
@@ -107,7 +107,6 @@ try {
     exit;
 }
 require __DIR__ . '/config.php';
-require_once __DIR__ . '/app/password_reset.php';
 try {
     if (!permitir_solicitud_recuperacion($pdo, $correo, $_SERVER['REMOTE_ADDR'] ?? 'unknown')) {
         header('Retry-After: 3600');

@@ -3,10 +3,10 @@ DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteRule ^(?:app|tests|migrations|vendor|\.github)(?:/|$) - [F,L]
+    RewriteRule ^(?:PHPMailer)(?:/|$) - [F,L]
 </IfModule>
 
-<FilesMatch "(^\.|^Dockerfile$|\.(sql|md|json|lock|ya?ml|log|ini|bak|zip)$|^(config(?:\..*)?|helpers|test_db)\.php$)">
+<FilesMatch "(^\.|^Dockerfile$|\.(sql|md|json|lock|ya?ml|log|ini|bak|zip)$|^(config(?:\..*)?|helpers|correo|test_db)\.php$)">
     Require all denied
 </FilesMatch>
 

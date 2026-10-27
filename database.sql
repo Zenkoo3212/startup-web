@@ -2,7 +2,7 @@
 -- Startup · Base de datos completa
 -- Importar directamente en phpMyAdmin (pestaña "Importar")
 -- Esquema para instalaciones nuevas: MySQL 8+ / MariaDB 10.6+.
--- Para actualizar una instalación existente, usa migrations/.
+-- Para actualizar una instalación existente, usa actualizar_recuperacion.sql.
 -- ============================================================
 
 CREATE DATABASE IF NOT EXISTS startup_db

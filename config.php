@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/app/bootstrap.php';
+require_once __DIR__ . '/correo.php';
 $DB_HOST = app_config('DB_HOST', 'localhost');
 $DB_NAME = app_config('DB_NAME', 'startup_db');
 $DB_USER = app_config('DB_USER', 'root');

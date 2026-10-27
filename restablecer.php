@@ -144,7 +144,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     exit;
 }
 
-require_once __DIR__ . '/app/bootstrap.php';
 require_once __DIR__ . '/helpers.php';
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Allow: GET, POST');
@@ -167,7 +166,6 @@ try {
     exit;
 }
 require __DIR__ . '/config.php';
-require_once __DIR__ . '/app/password_reset.php';
 try {
     if (!cambiar_password_recuperada($pdo, $token, $password)) {
         respuesta_json(['success' => false, 'message' => 'Este enlace venció, ya se utilizó o no es válido. Solicita uno nuevo.'], 410);
