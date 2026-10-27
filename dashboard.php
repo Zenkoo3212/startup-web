@@ -26,6 +26,7 @@ if (function_exists('mb_substr')) {
     <div class="topbar">
         <a href="dashboard.php" class="brand"><span class="brand-badge">SP</span> Startup</a>
         <div class="topbar-user">
+            <a href="explorar.php" class="btn btn-ghost btn-sm">Explorar</a>
             <span class="pill"><?php echo htmlspecialchars($rol); ?></span>
             <span>Hola, <b><?php echo htmlspecialchars($nombre); ?></b></span>
             <a href="logout.php" class="btn btn-ghost btn-sm">Cerrar sesión</a>
@@ -87,27 +88,37 @@ if (function_exists('mb_substr')) {
         <?php else: ?>
             <div class="page-head">
                 <div>
-                    <h1>Tu aventura</h1>
-                    <p>Tu progreso, actividades y compras se sincronizan automáticamente desde el juego.</p>
+                    <h1>Explora Startup</h1>
+                    <p>Consulta las actividades, los objetos y los personajes del catálogo.</p>
                 </div>
             </div>
 
             <div class="grid-menu">
-                <div class="menu-card" style="cursor:default;">
-                    <div class="icon">🎮</div>
-                    <h3>Abre el juego</h3>
-                    <span class="desc">Inicia el juego en Unreal Engine con este mismo correo para seguir jugando; tu nivel, XP y monedas se leen y guardan aquí automáticamente.</span>
-                </div>
-                <div class="menu-card" style="cursor:default;">
+                <a href="explorar.php?seccion=actividades" class="menu-card">
                     <div class="icon">📋</div>
                     <h3>Actividades</h3>
-                    <span class="desc">Complétalas hablando con los NPCs dentro del juego para ganar XP y monedas.</span>
-                </div>
-                <div class="menu-card" style="cursor:default;">
+                    <span class="desc">Explora los retos, su dificultad y las recompensas disponibles.</span>
+                </a>
+                <a href="explorar.php?seccion=objetos" class="menu-card">
+                    <div class="icon">🎒</div>
+                    <h3>Objetos</h3>
+                    <span class="desc">Consulta sus características, descripción y categoría.</span>
+                </a>
+                <a href="explorar.php?seccion=categorias" class="menu-card">
+                    <div class="icon">🏷️</div>
+                    <h3>Categorías</h3>
+                    <span class="desc">Encuentra los objetos organizados por categoría.</span>
+                </a>
+                <a href="explorar.php?seccion=npcs" class="menu-card">
+                    <div class="icon">🧑‍💼</div>
+                    <h3>Personajes NPC</h3>
+                    <span class="desc">Conoce su tipo, personalidad y nivel inicial.</span>
+                </a>
+                <a href="explorar.php?seccion=tiendas" class="menu-card">
                     <div class="icon">🏪</div>
-                    <h3>Tienda</h3>
-                    <span class="desc">Usa tus monedas dentro del juego para comprar objetos y accesorios.</span>
-                </div>
+                    <h3>Tiendas</h3>
+                    <span class="desc">Descubre las tiendas y consulta los objetos de su catálogo.</span>
+                </a>
             </div>
         <?php endif; ?>
 

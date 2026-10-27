@@ -13,6 +13,7 @@ Se movieron los archivos internos a carpetas y se actualizaron sus rutas de carg
 | `login.php` | Formulario e inicio de sesión. |
 | `logout.php` | Cierre de sesión. |
 | `dashboard.php` | Panel de la cuenta. |
+| `explorar.php` | Consulta para jugadores de actividades, objetos, categorías, NPC y tiendas, con búsqueda, detalles, filtros y paginación. |
 | `recuperar.php` | Solicita el correo para recuperar la contraseña. |
 | `restablecer.php` | Recibe el enlace y guarda la nueva contraseña. |
 | `categorias.php` | Administración de categorías. |
@@ -25,6 +26,10 @@ Se movieron los archivos internos a carpetas y se actualizaron sus rutas de carg
 | `eliminar_cuenta.php` | Elimina una cuenta tras validar la contraseña. |
 | `descargar_bd.php` | Permite al administrador descargar el archivo del esquema SQL; no es una copia de los usuarios actuales. |
 | `test_db.php` | Diagnóstico de conexión con MySQL. Apache bloquea su acceso público mediante las reglas incluidas. |
+
+## Consulta de catálogos
+
+Desde **Mi panel → Explorar**, cualquier usuario con sesión puede consultar los cinco catálogos. Las categorías y tiendas enlazan a sus objetos, y las actividades pueden filtrarse por dificultad. Este apartado solo acepta GET/HEAD y no modifica registros ni otorga recompensas. Las páginas originales de CRUD y sus solicitudes de escritura mantienen el permiso exclusivo de Admin. No es necesario cambiar el esquema ni volver a importar la base de datos.
 
 ## Contenido de las carpetas
 

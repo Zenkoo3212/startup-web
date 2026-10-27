@@ -121,6 +121,34 @@ tbody tr:hover{background:rgba(255,255,255,.02);}
 .modal-box p{color:var(--muted);font-size:.88rem;margin-bottom:16px;}
 
 .loading{color:var(--muted);font-size:.85rem;padding:18px;text-align:center;}
+
+/* ---------- Exploración del catálogo para jugadores ---------- */
+.topbar-user{flex-wrap:wrap;}
+.catalog-nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+.catalog-nav .catalog-active{border-color:var(--teal);color:var(--teal);background:rgba(46,230,197,.08);}
+.catalog-intro{color:var(--muted);margin:6px 0 18px;}
+.catalog-filters{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-bottom:22px;}
+.catalog-filters label{margin-top:0;}
+.catalog-search{flex:1 1 260px;}
+.catalog-filters>div:not(.catalog-search){flex:0 1 180px;}
+.catalog-count{color:var(--muted);font-size:.85rem;margin-bottom:16px;}
+.catalog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:16px;}
+.catalog-grid .catalog-card{margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0;overflow-wrap:anywhere;}
+.catalog-card h3{font-size:1.1rem;}
+.catalog-icon{display:flex;align-items:center;justify-content:center;background:var(--bg-panel-alt);width:42px;height:42px;border-radius:10px;font-size:1.3rem;}
+.catalog-facts{margin:0;width:100%;font-size:.85rem;}
+.catalog-facts div{display:flex;justify-content:space-between;gap:16px;padding:5px 0;}
+.catalog-facts dt{color:var(--muted);}
+.catalog-facts dd{margin:0;text-align:right;}
+.catalog-details{width:100%;border-top:1px solid var(--line);padding-top:12px;}
+.catalog-details summary{color:var(--teal);cursor:pointer;font-size:.87rem;}
+.catalog-details p{margin-top:10px;font-size:.88rem;}
+.catalog-related{margin-top:auto;}
+.catalog-pagination{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:24px;}
+.catalog-pagination span{color:var(--muted);font-size:.85rem;}
+.catalog-empty p{color:var(--muted);margin:8px 0 14px;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.catalog-page a:focus-visible,.catalog-page button:focus-visible,.catalog-details summary:focus-visible{outline:2px solid var(--teal);outline-offset:4px;}
 @media(max-width:600px){
     .wrap{padding:20px 14px 50px;}
     .topbar{padding:14px 16px;}
